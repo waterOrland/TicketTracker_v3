@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Shift" representedClassName="Shift" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <relationship name="tickets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ticket" inverseName="shift" inverseEntity="Ticket"/>
+    </entity>
+    <entity name="Ticket" representedClassName="Ticket" syncable="YES" codeGenerationType="class">
+        <attribute name="arrival" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="departure" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="employee" optional="YES" maxCount="1" deletionRule="Nullify"/>
+        <relationship name="shift" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Shift" inverseName="tickets" inverseEntity="Shift"/>
+    </entity>
+    <elements>
+        <element name="Shift" positionX="-234.984375" positionY="138.6640625" width="128" height="73"/>
+        <element name="Ticket" positionX="-168.5234375" positionY="273.2734375" width="128" height="133"/>
+    </elements>
+</model>

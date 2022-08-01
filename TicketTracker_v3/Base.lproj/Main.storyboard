@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ea-i4-QbX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="KXn-wt-90C">
+            <objects>
+                <tableViewController id="2uh-75-rBq" customClass="MainViewController" customModule="TicketTracker_v3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IQx-vv-GGg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableViewCell" id="UR8-Yr-lWn" customClass="MainTableViewCellController" customModule="TicketTracker_v3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UR8-Yr-lWn" id="6b0-tY-u1g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="757-rh-2hU">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAB-ja-v1W">
+                                            <rect key="frame" x="20" y="22" width="374" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UAB-ja-v1W" firstAttribute="top" secondItem="757-rh-2hU" secondAttribute="bottom" constant="1" id="9eo-f9-aqY"/>
+                                        <constraint firstItem="757-rh-2hU" firstAttribute="trailing" secondItem="UAB-ja-v1W" secondAttribute="trailing" id="NwP-6O-lMS"/>
+                                        <constraint firstItem="757-rh-2hU" firstAttribute="trailing" secondItem="6b0-tY-u1g" secondAttribute="trailingMargin" id="Qw4-ly-nsp"/>
+                                        <constraint firstItem="757-rh-2hU" firstAttribute="leading" secondItem="6b0-tY-u1g" secondAttribute="leadingMargin" id="bTo-Ck-XK0"/>
+                                        <constraint firstItem="757-rh-2hU" firstAttribute="top" secondItem="6b0-tY-u1g" secondAttribute="topMargin" constant="-11" id="gpX-jh-l6w"/>
+                                        <constraint firstItem="757-rh-2hU" firstAttribute="leading" secondItem="UAB-ja-v1W" secondAttribute="leading" id="uX9-FF-YnY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="arrivalLabel" destination="UAB-ja-v1W" id="NrU-oR-5Iu"/>
+                                    <outlet property="ticketLabel" destination="757-rh-2hU" id="VJb-T5-wrS"/>
+                                    <segue destination="feU-1A-oxP" kind="presentation" identifier="TicketViewController" id="0J8-eu-ReP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2uh-75-rBq" id="etE-eK-qKf"/>
+                            <outlet property="delegate" destination="2uh-75-rBq" id="mgG-Nu-aEY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="oAk-fS-lRf">
+                        <barButtonItem key="leftBarButtonItem" title="Monthly" id="eJh-8N-o81" userLabel="Monthly">
+                            <connections>
+                                <action selector="monthlyButton:" destination="2uh-75-rBq" id="9Se-Ym-ETa"/>
+                                <segue destination="Qpl-xV-Sfv" kind="show" identifier="MonthlyViewController" id="t2y-Vc-e7b"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UGy-mY-MYi">
+                            <connections>
+                                <action selector="addButton:" destination="2uh-75-rBq" id="Za7-oj-frI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHV-J9-6zb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.82608695652175" y="95.758928571428569"/>
+        </scene>
+        <!--Monthly View Controller-->
+        <scene sceneID="Swg-Qs-d1F">
+            <objects>
+                <tableViewController id="Qpl-xV-Sfv" customClass="MonthlyViewController" customModule="TicketTracker_v3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bMJ-Es-RX1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MonthlyTableViewCell" id="UAJ-yD-KYy">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UAJ-yD-KYy" id="J1b-Sl-QEU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qpl-xV-Sfv" id="mKQ-dY-iRn"/>
+                            <outlet property="delegate" destination="Qpl-xV-Sfv" id="9zO-gk-ag6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="j2O-D9-Dfz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="PWf-NX-5rz"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTE-k4-QF3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="-217"/>
+        </scene>
+        <!--Ticket View Controller-->
+        <scene sceneID="0QH-Mx-OKi">
+            <objects>
+                <viewController id="feU-1A-oxP" customClass="TicketViewController" customModule="TicketTracker_v3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K23-QP-CXE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jrv-Ob-LH5">
+                                <rect key="frame" x="20" y="44" width="374" height="764"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezv-0O-rnH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ticketNumber" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAR-ZI-BmQ">
+                                        <rect key="frame" x="0.0" y="70" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40M-h5-OKq">
+                                        <rect key="frame" x="0.0" y="140" width="374" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timeOfArrival" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORB-d6-tSD">
+                                        <rect key="frame" x="0.0" y="209.5" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWq-2Y-P1s">
+                                        <rect key="frame" x="0.0" y="279.5" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timeOfDeparture" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjt-R6-1YG">
+                                        <rect key="frame" x="0.0" y="349.5" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Stayed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YyK-P1-q2p">
+                                        <rect key="frame" x="0.0" y="419.5" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalStayed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV3-Yo-Sxv">
+                                        <rect key="frame" x="0.0" y="489.5" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HL8-Vd-d2n">
+                                        <rect key="frame" x="0.0" y="559.5" width="374" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalCost" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3v-Vq-hPQ">
+                                        <rect key="frame" x="0.0" y="629" width="374" height="65"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgy-A5-ISp">
+                                        <rect key="frame" x="0.0" y="699" width="374" height="65"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Complete">
+                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="completionButton:" destination="feU-1A-oxP" eventType="touchUpInside" id="kDK-dS-sOB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E52-Xm-gIp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E52-Xm-gIp" firstAttribute="trailing" secondItem="jrv-Ob-LH5" secondAttribute="trailing" constant="20" id="0HZ-hq-b0Z"/>
+                            <constraint firstItem="jrv-Ob-LH5" firstAttribute="top" secondItem="E52-Xm-gIp" secondAttribute="top" id="Gg6-dZ-yUy"/>
+                            <constraint firstItem="jrv-Ob-LH5" firstAttribute="leading" secondItem="E52-Xm-gIp" secondAttribute="leading" constant="20" id="jNL-jK-S7x"/>
+                            <constraint firstItem="E52-Xm-gIp" firstAttribute="bottom" secondItem="jrv-Ob-LH5" secondAttribute="bottom" constant="34" id="jmv-ac-vfC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arrivalTime" destination="ORB-d6-tSD" id="Fsh-MW-iej"/>
+                        <outlet property="departureTime" destination="Pjt-R6-1YG" id="hQ8-ii-8mj"/>
+                        <outlet property="ticketLabel" destination="jAR-ZI-BmQ" id="ztL-Yb-bE5"/>
+                        <outlet property="totalCost" destination="T3v-Vq-hPQ" id="0iB-HB-BH9"/>
+                        <outlet property="totalStayed" destination="OV3-Yo-Sxv" id="gNv-2f-4k9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2h-rH-6zL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="441"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R9X-r6-n0h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ea-i4-QbX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zbi-1X-chG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2uh-75-rBq" kind="relationship" relationship="rootViewController" id="ZJu-uc-GtL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I68-EU-ycE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

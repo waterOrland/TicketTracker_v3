@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		572722E4288EE18A006FFF96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572722E3288EE18A006FFF96 /* AppDelegate.swift */; };
+		572722E6288EE18A006FFF96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572722E5288EE18A006FFF96 /* SceneDelegate.swift */; };
+		572722E8288EE18A006FFF96 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572722E7288EE18A006FFF96 /* MainViewController.swift */; };
+		572722EB288EE18A006FFF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572722E9288EE18A006FFF96 /* Main.storyboard */; };
+		572722EE288EE18A006FFF96 /* TicketTracker_v3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 572722EC288EE18A006FFF96 /* TicketTracker_v3.xcdatamodeld */; };
+		572722F0288EE18B006FFF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 572722EF288EE18B006FFF96 /* Assets.xcassets */; };
+		572722F3288EE18B006FFF96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572722F1288EE18B006FFF96 /* LaunchScreen.storyboard */; };
+		57272300288EE514006FFF96 /* MainTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572722FF288EE514006FFF96 /* MainTableViewCellController.swift */; };
+		57272302288F4446006FFF96 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57272301288F4446006FFF96 /* TicketViewController.swift */; };
+		57272304288F4452006FFF96 /* MonthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57272303288F4452006FFF96 /* MonthlyViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		572722E0288EE18A006FFF96 /* TicketTracker_v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketTracker_v3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		572722E3288EE18A006FFF96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		572722E5288EE18A006FFF96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		572722E7288EE18A006FFF96 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		572722EA288EE18A006FFF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		572722ED288EE18A006FFF96 /* TicketTracker_v3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TicketTracker_v3.xcdatamodel; sourceTree = "<group>"; };
+		572722EF288EE18B006FFF96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		572722F2288EE18B006FFF96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		572722F4288EE18B006FFF96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572722FF288EE514006FFF96 /* MainTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCellController.swift; sourceTree = "<group>"; };
+		57272301288F4446006FFF96 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
+		57272303288F4452006FFF96 /* MonthlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		572722DD288EE18A006FFF96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		572722D7288EE18A006FFF96 = {
+			isa = PBXGroup;
+			children = (
+				572722E2288EE18A006FFF96 /* TicketTracker_v3 */,
+				572722E1288EE18A006FFF96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		572722E1288EE18A006FFF96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				572722E0288EE18A006FFF96 /* TicketTracker_v3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		572722E2288EE18A006FFF96 /* TicketTracker_v3 */ = {
+			isa = PBXGroup;
+			children = (
+				572722FD288EE226006FFF96 /* Delegates */,
+				572722FC288EE21B006FFF96 /* View Controllers */,
+				572722FB288EE215006FFF96 /* Core Data */,
+				572722FA288EE204006FFF96 /* Supporting Files */,
+				572722E9288EE18A006FFF96 /* Main.storyboard */,
+				572722F4288EE18B006FFF96 /* Info.plist */,
+			);
+			path = TicketTracker_v3;
+			sourceTree = "<group>";
+		};
+		572722FA288EE204006FFF96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				572722EF288EE18B006FFF96 /* Assets.xcassets */,
+				572722F1288EE18B006FFF96 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		572722FB288EE215006FFF96 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				572722EC288EE18A006FFF96 /* TicketTracker_v3.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		572722FC288EE21B006FFF96 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				572722E7288EE18A006FFF96 /* MainViewController.swift */,
+				572722FE288EE4E7006FFF96 /* MainTableViewCell */,
+				57272301288F4446006FFF96 /* TicketViewController.swift */,
+				57272303288F4452006FFF96 /* MonthlyViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		572722FD288EE226006FFF96 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				572722E3288EE18A006FFF96 /* AppDelegate.swift */,
+				572722E5288EE18A006FFF96 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		572722FE288EE4E7006FFF96 /* MainTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				572722FF288EE514006FFF96 /* MainTableViewCellController.swift */,
+			);
+			path = MainTableViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		572722DF288EE18A006FFF96 /* TicketTracker_v3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572722F7288EE18B006FFF96 /* Build configuration list for PBXNativeTarget "TicketTracker_v3" */;
+			buildPhases = (
+				572722DC288EE18A006FFF96 /* Sources */,
+				572722DD288EE18A006FFF96 /* Frameworks */,
+				572722DE288EE18A006FFF96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicketTracker_v3;
+			productName = TicketTracker_v3;
+			productReference = 572722E0288EE18A006FFF96 /* TicketTracker_v3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		572722D8288EE18A006FFF96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					572722DF288EE18A006FFF96 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 572722DB288EE18A006FFF96 /* Build configuration list for PBXProject "TicketTracker_v3" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 572722D7288EE18A006FFF96;
+			productRefGroup = 572722E1288EE18A006FFF96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				572722DF288EE18A006FFF96 /* TicketTracker_v3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		572722DE288EE18A006FFF96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572722F3288EE18B006FFF96 /* LaunchScreen.storyboard in Resources */,
+				572722F0288EE18B006FFF96 /* Assets.xcassets in Resources */,
+				572722EB288EE18A006FFF96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		572722DC288EE18A006FFF96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57272304288F4452006FFF96 /* MonthlyViewController.swift in Sources */,
+				572722E8288EE18A006FFF96 /* MainViewController.swift in Sources */,
+				572722EE288EE18A006FFF96 /* TicketTracker_v3.xcdatamodeld in Sources */,
+				57272302288F4446006FFF96 /* TicketViewController.swift in Sources */,
+				572722E4288EE18A006FFF96 /* AppDelegate.swift in Sources */,
+				572722E6288EE18A006FFF96 /* SceneDelegate.swift in Sources */,
+				57272300288EE514006FFF96 /* MainTableViewCellController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		572722E9288EE18A006FFF96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				572722EA288EE18A006FFF96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		572722F1288EE18B006FFF96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				572722F2288EE18B006FFF96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		572722F5288EE18B006FFF96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		572722F6288EE18B006FFF96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		572722F8288EE18B006FFF96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BS8LQA234;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TicketTracker_v3/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "non.TicketTracker-v3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		572722F9288EE18B006FFF96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3BS8LQA234;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TicketTracker_v3/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "non.TicketTracker-v3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		572722DB288EE18A006FFF96 /* Build configuration list for PBXProject "TicketTracker_v3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572722F5288EE18B006FFF96 /* Debug */,
+				572722F6288EE18B006FFF96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		572722F7288EE18B006FFF96 /* Build configuration list for PBXNativeTarget "TicketTracker_v3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572722F8288EE18B006FFF96 /* Debug */,
+				572722F9288EE18B006FFF96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		572722EC288EE18A006FFF96 /* TicketTracker_v3.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				572722ED288EE18A006FFF96 /* TicketTracker_v3.xcdatamodel */,
+			);
+			currentVersion = 572722ED288EE18A006FFF96 /* TicketTracker_v3.xcdatamodel */;
+			path = TicketTracker_v3.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 572722D8288EE18A006FFF96 /* Project object */;
+}
